@@ -1,0 +1,6 @@
+# p, admin, /admin-route, read
+# p, admin, /admin-route, write
+# p, user, /user-route, read
+# p, admin, /admin-route, placeholder
+p, admin, /admin-route
+p, user, /user-route

@@ -52,15 +52,15 @@ class UserController extends Controller
     public function givePermissionToUser(Request $request)
     {
         // adds permissions to a user
-        Enforcer::addPermissionForUser('eve', 'articles', 'read');
+        Enforcer::addPermissionForUser('Mr. Scotty Lockman', 'articles', 'read');
         // adds a role for a user.
-        Enforcer::addRoleForUser('eve', 'writer');
+        Enforcer::addRoleForUser('Mr. Scotty Lockman', 'admin');
         // adds permissions to a rule
-        Enforcer::addPolicy('writer', 'articles', 'edit');
+        Enforcer::addPolicy('admin', 'articles', 'edit');
     }
 
     public function giveUserRBAC(Request $request)
     {
-        Enforcer::addRoleForUser($request->name, 'writer');
+        Enforcer::addRoleForUser('Mr. Scotty Lockman', 'admin');
     }
 }
